@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+
+    <RelativeLayout
+        android:id="@+id/top_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:id="@+id/tv_Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            tools:text="Rating" />
+
+        <ImageView
+            android:id="@+id/iv_Star"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/tv_Rating"
+            android:layout_toEndOf="@id/tv_Rating"
+            android:contentDescription="@string/star"
+            android:src="@mipmap/star" />
+
+        <TextView
+            android:id="@+id/tv_Votes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/iv_Star"
+            android:layout_toEndOf="@id/iv_Star"
+            android:gravity="center"
+            tools:text ="(1200)"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_ReleaseYear"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/top_Layout"
+        tools:text= "01.01.3002"
+        android:gravity="center" />
+
+
+    <TextView
+        android:id="@+id/tv_Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_ReleaseYear"
+        android:ellipsize="end"
+        android:scrollbars="vertical"
+        android:textColor="@android:color/black" />
+
+
+
+
+
+</RelativeLayout>

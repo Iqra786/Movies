@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="star">stat</string>
+    <string name="processing">processing</string>
+    <string name="cal">cal</string>
+    <string name="more_info">more info</string>
+    <string-array name="movies_options">
+        <item>Movies</item>
+        <item>TV Shows</item>
+        <item>People</item>
+    </string-array>
+</resources>
