@@ -1,4 +1,4 @@
-package movie.test.movies.presentor;
+package movie.test.movies;
 
 import android.content.Context;
 import android.util.AttributeSet;

@@ -6,7 +6,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class JsonParser {
     private static final String TAG = JsonParser.class.getSimpleName();
 
 
-    public Query mapMovieResult(JSONObject result) {
+    public static Query mapMovieResult(JSONObject result) {
         Query query = null;
         List<Movie> movie_resultList = null;
         if (result != null) {
@@ -36,13 +35,14 @@ public class JsonParser {
                 }
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
             try {
                 if (result.has("results") && result.getJSONArray("results").length() > 0) {
                     JSONArray resultsArray = result.getJSONArray("results");
                     Movie movie_result;
                     movie_resultList = new ArrayList<>();
-                    for (int i = 0; i <= resultsArray.length(); i++) {
+                    for (int i = 0; i <= resultsArray.length() -1; i++) {
                         JSONObject movie_DetailObject = resultsArray.getJSONObject(i);
                         movie_result = new Movie();
                         try {
@@ -50,6 +50,7 @@ public class JsonParser {
                             movie_result.setPosterPath(poster_Path);
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -57,6 +58,7 @@ public class JsonParser {
                             movie_result.setReleaseDate(release_Date);
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -66,6 +68,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
 
@@ -76,6 +79,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -85,6 +89,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -94,6 +99,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -103,6 +109,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -112,6 +119,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
 
@@ -122,6 +130,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -131,6 +140,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -140,6 +150,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -149,6 +160,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         movie_resultList.add(movie_result);
@@ -157,6 +169,7 @@ public class JsonParser {
 
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
         }
         if (query != null) {
@@ -178,13 +191,14 @@ public class JsonParser {
                 }
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
             try {
                 if (result.has("results") && result.getJSONArray("results").length() > 0) {
                     JSONArray resultsArray = result.getJSONArray("results");
                     Tv tv_Result;
                     tv_ResultList = new ArrayList<>();
-                    for (int i = 0; i <= resultsArray.length(); i++) {
+                    for (int i = 0; i <= resultsArray.length() - 1; i++) {
                         JSONObject movie_DetailObject = resultsArray.getJSONObject(i);
                         tv_Result = new Tv();
                         try {
@@ -194,6 +208,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -203,6 +218,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
 
@@ -213,6 +229,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -231,6 +248,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -240,6 +258,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -249,6 +268,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
 
@@ -259,6 +279,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -268,6 +289,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
                         try {
                             if (movie_DetailObject.has("vote_average")) {
@@ -276,6 +298,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         tv_ResultList.add(tv_Result);
@@ -284,6 +307,7 @@ public class JsonParser {
 
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
         }
         if (query != null) {
@@ -305,13 +329,14 @@ public class JsonParser {
                 }
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
             try {
                 if (result.has("results") && result.getJSONArray("results").length() > 0) {
                     JSONArray resultsArray = result.getJSONArray("results");
                     Person pp_Result;
                     pp_ResultList = new ArrayList<>();
-                    for (int i = 0; i <= resultsArray.length(); i++) {
+                    for (int i = 0; i <= resultsArray.length() -1 ; i++) {
                         JSONObject movie_DetailObject = resultsArray.getJSONObject(i);
                         pp_Result = new Person();
                         try {
@@ -321,6 +346,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -330,6 +356,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         try {
@@ -339,6 +366,7 @@ public class JsonParser {
                             }
                         } catch (Exception e) {
                             Log.e(TAG, e.getMessage());
+                            e.printStackTrace();
                         }
 
                         pp_ResultList.add(pp_Result);
@@ -347,6 +375,7 @@ public class JsonParser {
 
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
         }
 
@@ -368,6 +397,7 @@ public class JsonParser {
                 }
             } catch (JSONException e) {
                 Log.e(TAG, e.getMessage());
+                e.printStackTrace();
             }
         }
 

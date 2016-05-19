@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by muhammad ali on 10/05/2016.
+ * Created by muhammad ali
+ * on 10/05/2016.
  */
-public class Tv extends MediaInfo implements Serializable {
+public class Tv extends Detail_Info implements Serializable {
 
     private List<String> originCountry = new ArrayList<>();
 

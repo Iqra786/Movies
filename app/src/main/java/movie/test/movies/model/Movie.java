@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Created by muhammad ali on 10/05/2016.
  */
-public class Movie extends MediaInfo implements Serializable {
+public class Movie extends Detail_Info implements Serializable {
 
     private Boolean adult;
     private Boolean video;

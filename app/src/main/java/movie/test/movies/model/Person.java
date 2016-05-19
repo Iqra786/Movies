@@ -4,7 +4,7 @@ package movie.test.movies.model;
  * Created by muhammadali
  * on 10/05/2016.
  */
-public class Person extends MediaInfo {
+public class Person extends Detail_Info {
 
     private String bio;
 

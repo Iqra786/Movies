@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Created by muhammad ali on 10/05/2016.
  */
-public class MediaInfo implements Serializable {
+public class Detail_Info implements Serializable {
 
     protected Integer id;
     protected Double popularity;

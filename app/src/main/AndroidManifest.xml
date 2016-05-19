@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".presentor.Activity_LandingPage"
+            android:name=".MainPage"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,9 +21,8 @@
         </activity>
 
         <activity
-            android:name=".presentor.DetailActivity"
+            android:name=".DetailActivity"
             android:screenOrientation="portrait" />
-
     </application>
 
 
