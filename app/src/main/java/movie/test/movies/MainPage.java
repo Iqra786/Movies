@@ -14,9 +14,10 @@ import android.view.View;
 
 
 import movie.test.movies.presenter.MainPagePresenter;
+import movie.test.movies.view.MainPageView;
 
 
-public class MainPage extends AppCompatActivity implements MainPagePresenter.MainPageView {
+public class MainPage extends AppCompatActivity implements MainPageView {
 
     private final static String TAG = MainPage.class.getSimpleName();
     private DrawerLayout mDrawerLayout;

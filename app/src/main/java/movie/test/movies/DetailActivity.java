@@ -18,7 +18,6 @@ import movie.test.movies.view.DetailView;
  */
 public class DetailActivity extends AppCompatActivity implements DetailView {
 
-    private DetailPresenter mDetailPresenter;
     private TextView tv_Title;
     private TextView tv_Rating;
     private TextView tv_Year;
@@ -31,7 +30,7 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        mDetailPresenter = new DetailPresenter(this);
+        DetailPresenter mDetailPresenter = new DetailPresenter(this);
         tv_Title = (TextView) findViewById(R.id.tv_Title);
         tv_Rating = (TextView) findViewById(R.id.tv_Rating);
         tv_Year = (TextView) findViewById(R.id.tv_ReleaseYear);
@@ -42,11 +41,6 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
         mDetailPresenter.getData(info);
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
 
     @Override
     public void setTitle(CharSequence title) {
@@ -56,7 +50,9 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
 
     @Override
     public void setActivityTitle(String activityTitle) {
-        getSupportActionBar().setTitle(activityTitle);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setTitle(activityTitle);
+        }
     }
 
     @Override

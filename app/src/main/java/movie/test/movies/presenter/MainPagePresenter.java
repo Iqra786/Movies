@@ -3,6 +3,7 @@ package movie.test.movies.presenter;
 import movie.test.movies.data_manager.DataManager;
 import movie.test.movies.model.Query;
 import movie.test.movies.model.SideMenu;
+import movie.test.movies.view.MainPageView;
 
 /**
  * Created by muhammad ali
@@ -25,15 +26,6 @@ public class MainPagePresenter implements Observer, DataManager.Response {
 
     @Override
     public void dataManagerResponse(Query result) {
-        System.out.println("Hello" + result);
-    }
-
-    public interface MainPageView {
-        void setNavigationBarTitle(String title);
-
-        void showProgress();
-
-        void dismissProgress();
     }
 
 

@@ -12,12 +12,13 @@ import android.widget.ListView;
 import java.util.List;
 import movie.test.movies.model.SideMenu;
 import movie.test.movies.presenter.SideMenuFragmentPresenter;
+import movie.test.movies.view.SideMenuView;
 
 /**
  * Created by muhammad ali
  * on 13/05/2016.
  */
-public class SideMenuFragment extends ListFragment implements SideMenuFragmentPresenter.ViewRender {
+public class SideMenuFragment extends ListFragment implements SideMenuView {
 
     private static final String TAG = SideMenuFragment.class.getSimpleName();
     private ListView mListView;

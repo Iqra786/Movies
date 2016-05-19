@@ -13,12 +13,13 @@ import android.widget.ViewAnimator;
 import java.util.List;
 
 import movie.test.movies.presenter.MediaFragmentPresenter;
+import movie.test.movies.view.MediaResultView;
 
 /**
  * Created by muhammad ali
  * on 10/05/2016.
  */
-public class MediaResultFragment extends Fragment implements MediaFragmentPresenter.MediaResult {
+public class MediaResultFragment extends Fragment implements MediaResultView {
 
     private static final int POSITION_LIST = 0;
     private static final int POSITION_LOADING = 1;

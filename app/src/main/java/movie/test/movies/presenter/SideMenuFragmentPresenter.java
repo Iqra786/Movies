@@ -1,9 +1,7 @@
 package movie.test.movies.presenter;
 
-import java.util.List;
-
-import movie.test.movies.model.SideMenu;
 import movie.test.movies.model.SideMenuData;
+import movie.test.movies.view.SideMenuView;
 
 /**
  * Created by muhammad ali
@@ -11,10 +9,10 @@ import movie.test.movies.model.SideMenuData;
  */
 public class SideMenuFragmentPresenter implements Observer {
 
-    ViewRender view;
+    SideMenuView view;
     SideMenuData menuData = new SideMenuData();
 
-    public void initialize(ViewRender viewRender) {
+    public void initialize(SideMenuView viewRender) {
         this.view = viewRender;
         loadMenuList();
         Subject.getInstance().attach(this);
@@ -28,8 +26,6 @@ public class SideMenuFragmentPresenter implements Observer {
 
     public void setTitle(Object object) {
       Subject.getInstance().notifyAllObserver(object);
-//      System.out.println("title" +  ((SideMenu)object).getTitle());
-
     }
 
     @Override
@@ -37,11 +33,6 @@ public class SideMenuFragmentPresenter implements Observer {
 
     }
 
-
-    public interface ViewRender {
-        void renderList(List<SideMenu> sideMenus);
-
-    }
 
 
 }

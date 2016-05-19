@@ -8,6 +8,7 @@ import java.util.List;
 import movie.test.movies.data_manager.DataManager;
 import movie.test.movies.model.Query;
 import movie.test.movies.model.SideMenu;
+import movie.test.movies.view.MediaResultView;
 
 /**
  * Created by muhammad ali
@@ -15,9 +16,9 @@ import movie.test.movies.model.SideMenu;
  */
 public class MediaFragmentPresenter implements Observer, DataManager.Response {
 
-    MediaResult mMediaResult;
+    MediaResultView mMediaResult;
 
-    public MediaFragmentPresenter(MediaResult mediaResult) {
+    public MediaFragmentPresenter(MediaResultView mediaResult) {
         Subject.getInstance().attach(this);
         this.mMediaResult =mediaResult;
     }
@@ -62,12 +63,6 @@ public class MediaFragmentPresenter implements Observer, DataManager.Response {
         }
     }
 
-    public interface MediaResult {
-        void renderList(List<?> data);
 
-        void showProgress();
-
-        void dismissProgress();
-    }
 
 }
